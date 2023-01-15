@@ -6,4 +6,4 @@ echo "Variables:"
 echo "PLEX_HOSTNAME=${PLEX_HOSTNAME}"
 echo "PLEX_TOKEN=${PLEX_TOKEN}"
 echo "CRON_EXPRESSION=${CRON_EXPRESSION}"
-"${CRON_EXPRESSION} /autopoweroff.sh" | crontab -
+echo "${CRON_EXPRESSION} /autopoweroff.sh" | crontab -
