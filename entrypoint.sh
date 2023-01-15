@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/bash
 echo "################################"
 echo "Starting autopoweroff container."
 echo "################################"
