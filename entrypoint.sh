@@ -7,4 +7,6 @@ echo "PLEX_HOSTNAME=${PLEX_HOSTNAME}"
 echo "PLEX_TOKEN=${PLEX_TOKEN}"
 echo "CRON_EXPRESSION=${CRON_EXPRESSION}"
 echo "################################"
-exec /autopoweroff.sh
+touch /autopoweroff.log
+echo -e "${CRON_EXPRESSION//\ /\\t}\t/autopoweroff.sh >> /autopoweroff.log 2>&1" >> /var/spool/cron/crontabs/root
+exec crond && tail -F /autopoweroff.log
