@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "################################"
-echo "Starting autopoweroff script."
+echo "Starting autopoweroff container."
 echo "################################"
 echo "Environment variables:"
 echo "PLEX_HOSTNAME=${PLEX_HOSTNAME}"
