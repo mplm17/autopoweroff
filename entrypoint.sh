@@ -8,5 +8,4 @@ echo "PLEX_TOKEN=${PLEX_TOKEN}"
 echo "CRON_EXPRESSION=${CRON_EXPRESSION}"
 echo "################################"
 echo -e "${CRON_EXPRESSION//\ /\\t}\t/autopoweroff.sh >> /autopoweroff.log 2>&1" >> /var/spool/cron/crontabs/root
-crond
-exec tail -F /autopoweroff.log
+exec crond && tail -F /autopoweroff.log
