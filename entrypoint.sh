@@ -11,4 +11,4 @@ echo "################################################################"
 printenv > /var/spool/cron/crontabs/root
 echo "${CRON_EXPRESSION} /autopoweroff.sh >> /autopoweroff.log 2>&1" >> /var/spool/cron/crontabs/root
 crontab /var/spool/cron/crontabs/root
-exec bash -c "cron && tail -F /autopoweroff.log"
+exec bash -c "cron && tail -F -n0 /autopoweroff.log"
