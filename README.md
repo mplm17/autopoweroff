@@ -3,16 +3,16 @@
 ## Usage
 
 ### Docker-compose
-````
+```
   autopoweroff:
     build:
       context: https://github.com/mplm17/autopoweroff.git#main
     environment:
-      - TZ=**<timezone>**
-      - PLEX_HOSTNAME=**<hostname>**
-      - PLEX_TOKEN=**<token>**
-      - CRON_EXPRESSION=**<cron_expression>**
-      - DEADLINE=**<deadline>**
+      - TZ=<timezone>
+      - PLEX_HOSTNAME=<hostname>
+      - PLEX_TOKEN=<token>
+      - CRON_EXPRESSION=<cron_expression>
+      - DEADLINE=<deadline>
     volumes:
       - /bin/systemctl:/bin/systemctl
       - /run/systemd/system:/run/systemd/system
@@ -20,9 +20,9 @@
       - /sys/fs/cgroup:/sys/fs/cgroup
     privileged: true
     restart: unless-stopped
-````
+```
 ### Example
-````
+```
   autopoweroff:
     build:
       context: https://github.com/mplm17/autopoweroff.git#main
@@ -40,4 +40,4 @@
     privileged: true
     labels:
     restart: unless-stopped
-````
+```
